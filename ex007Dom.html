@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+
+    <style>
+        body{
+            background: blue;
+            color:white;
+            font:normal 18px Arial;
+            }
+    </style>
+
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o <strong>resultado</strong></p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        window.document.write('Olá, Mundo!') //Usar JS para mostrar tela*
+        window.document.write(window.document.charset) //para saber os caracteres
+        window.document.write(window.document.URL)//Escreva o URL
+        //Da para selecionar por marca, ID, Nome, Classe, Seletor
+        let p1=window.document.getElementsByTagName('p')[0]//Assim para pegar o Elemento sem classe, logo depois o [0] para primeiro elemento, que no caso é <p>, lembrar de colocar a "var" para guardar o resultado
+        let p2='Allan'
+        window.document.write(p1.innerText)//Aqui está dizendo para mostrar a variável p1 em texto
+        p1.style.color = 'Red' //Usando JS para mudar a cor da variavel p1 para vermelho
+        let novocorpo = window.document.body //Aqui diz "Variável novocorpo recebe oque está em window.document.body(que nesse caso é todo o <body>"
+        novocorpo.style.background = 'gray' //Variavel.style.background, usei Javascript para mudar o background
+        window.alert(p1)//Para mostrar a variável, ela já deve estar definida antes. Não esqueça do .innerText
+        window.alert(p1.innerText)//Aqui mostra o texto sem código HTML
+        window.alert(p1.innerHTML)//Aqui mostra toda a linha incluindo código HTML
+        window.document.write(p2.innerText)//Aqui mandei mostrar uma váriavel p2 em texto
+        let nome=window.prompt('Digite seu nome');
+        let sobrenome=window.prompt('Agora seu sobrenome');
+        window.alert('Olá ' + nome + ' ' + sobrenome + ', como vai?')
+        window.document.write(nome)//Escrever a variavel
+        
+
+        
+        
+       </script>
+    
+</body>
+</html>

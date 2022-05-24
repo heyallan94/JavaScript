@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS INVEST</title> 
+
+  <style>/*Aqui é o CSS, parte de style e design*/
+  body {
+    background-color: rgb(72, 255, 0); color: rgb(0, 0, 0); font: normal 20pt Arial 
+  }
+
+  </style>
+
+</head>
+<body><!--HTML AQUI-->
+  <h1>Título</h1><!--Para comentar em HTML é assim, lembre que HTML É a parte de escrita--> 
+  <p>Linha 1</p><!--Para escrever uma linha é P-->
+  <pl>Linha 2</pl><!--Usamos PL para escrever e pular linha-->
+
+<script>//Aqui é a parte do javascript, é onde o site tome vida
+console.log(window)
+  var nome = window.prompt('Digite seu nome') //a variável nome recebe o valor digitado no prompt
+  window.alert(nome + ', você sabe oque é o AS INVEST?')//concatenação, note que usamos o NOME que é a variável para mostrar. Texto tem que ter ""
+  var n1 = window.prompt('Agora digite um número')//se quiser receber em número, usa var n1 = Number(window.prompt('Agora digite um número'))
+  var n2 = window.prompt('Digite outro número diferente de ' + n1)
+  var s = Number(n1) + Number(n2)//Aqui eu usei outro método para converter um dado para número
+  window.alert('a soma de ' + n1 + ' e ' + n2 + ' é igual à ' + s)//lembre-se de usar os + entre os dados
+  window.alert(`A divisão de ${n1} e ${n2} é igual à ${n1/n2}`)//Note que usar crase pode usar string template ${}
+  var letras1 = window.prompt('Digite uma frase em minúsculo')
+  window.alert(letras1.toUpperCase()) //Usa assim para transformar em maíusculo , para minuscula letras1.toLowerCase(1)
+  document.querySelector 
+  
+</script>    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição simples</title>
+
+    <style>
+        body{
+            background-color: rgb(240, 236, 236);
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+
+        #titulo{
+            margin-left: 50px;
+        }
+
+        #descricao{
+            margin-left: 50px;
+        }
+
+        #intxt{
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Nacionalidade</h1>
+    <div id="descricao">Digite o país de origem</div>
+    <input type="text" name="intxt" id="intxt">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+    <div id="res2"></div> 
+</body>
+<script>  
+    let pais = document.getElementById('intxt')//atribuindo uma variavel, pais, ao input de intxt
+
+    function calcular(){ //após clicar no input
+    let res = document.getElementById('res') //res recebe o valor da div res
+    let res2 = document.getElementById('res2')
+       if (pais == 'Brasil'){ //Se país FOR IGUAL a Brasil
+           res.innerText= 'Este sistema é apenas para moradores do Brasil.'
+       }
+           res2.innerText= `Obrigado por usar o sistema!`
+    }
+    
+    
+</script>
+</html>

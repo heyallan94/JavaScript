@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super relógio</title>
+
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 100px;
+            margin-top: 100px;
+            background-color: rgb(200, 236, 200);
+        }
+
+        #Descricao{
+            background-color: beige;
+            width: 300px;
+        }
+
+        #Descricao-botao{
+            background-color: beige;
+            margin-left: 100px;
+        }
+
+        #Saudcao{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="Descricao">Clique no botão para saber a hora</div>
+    <input id="Descricao-botao" type="button" value="Horas" onclick="Horas()">
+    <p id="Saudacao"></p>
+    <p id="Saudacao2"></p>
+    
+</body>
+<script>
+
+    function Horas(){
+    let horario = new Date()
+    let hora = horario.getHours()
+    let res = document.getElementById('Saudacao')
+    let res2 = document.getElementById('Saudacao2')
+    
+    if (hora >=0 && hora <8){
+        res.innerHTML= `São ${hora} horas.<br>`
+        res2.innerText = 'É de madrugada, você deveria estar dormindo'
+    }
+    else if(hora >=8 && hora <12){
+        res.innerHTML= `São ${hora} horas.<br>`
+        res2.innerText = 'Tenha um bom dia!'
+    }
+    else if(hora == 12){
+        res.innerHTML= `São ${hora} horas.<br>`
+        res2.innerText ='Bom almoço!'
+    }
+    else if(hora >12 && hora <=18){
+        res.innerHTML= `São ${hora} horas.<br>`
+        res2.innerText = 'Tenha uma boa tarde!'
+    }
+    else if(hora <=23){
+        res.innerHTML= `São ${hora} horas.<br>`
+        res2.innerText ='Boa noite'
+    }
+    else {(hora >=24)
+        res.innerHTML= `São ${hora} horas.<br>`
+        res2.innerText = 'Hora inválida!'}}
+</script>
+</html>

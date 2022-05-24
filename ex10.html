@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #area{/*id é em #, se fosse classe seria .area*/
+           font: normal 15pt Arial ;
+           background-color: rgb(0, 0, 0);
+           color: white;
+           width: 200px;
+           height: 200px;
+           line-height: 200px;
+           text-align: center;
+             }
+
+        .area2{
+            font: normal 20pt Impact;
+            background-color: red;
+            color: black;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+
+        }
+                   
+    </style>
+</head>
+<body>
+    <div id="area" onmouseenter="entrar()" onmouseout="sair()"> <!--Dessa maneira para definir eventos em HTML, onmouseout é um comando do próprio JS, após ele colocar em "aspas" o nome da função que você quer-->
+        Botão
+    </div>
+
+    <div class="area2"><!--Segundo botão para nova função-->
+        Olha outro botão
+    </div>
+</body>
+<script>
+         let a = document.getElementById('area');//Function no id
+         let b = document.getElementsByClassName('area2')[0];//Function para class, mesmo uma classe apenas, coloque no plural e o [] no final
+         b.addEventListener("mouseout", sair2);   
+         b.addEventListener("click", clicar2);//Lembrar que você deve dizer ao javascript para guardar um dado, uma let com o valor que vai receber os eventos
+         a.addEventListener("click", clicar);//Neste caso, eu dei uma variável a e b que recebam os dados dos elementos area e area2 que são dois divs
+         
+     function sair2(){
+         b.innerText = 'Saiu, volte pra cá'
+         b.style.background = 'green'
+     }
+     function clicar2(){//function NOMEDAFUNÇÃO(){}
+         b.innerText = 'novo botão'//Ao executar a função, o texto será alterado para 'novo botão'
+         b.style.background = 'white'//O background será mudado de acordo com a cor
+     }
+     function clicar(){//outrafunção NOMEDAFUNÇÃO(){}
+         a.innerText = 'Clicou!'
+         a.style.background = 'Red'
+           };
+
+     function entrar(){
+         a.innerText = 'Entrou'
+           };
+
+     function sair(){
+         a.innerText = 'Saiu'
+         a.style.background = 'Green'
+        };
+
+
+</script>
+</html>
