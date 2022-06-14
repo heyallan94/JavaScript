@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+
+<body>
+    <h1 id="titulo">Create Element</h1>
+    <p id="Cidade">Um bairro é cheio de </p>
+    <p id="Casa">As casas, são cheias de </p>
+    <input type="button" value="Criar nome Casa" onclick="btnCasa()"><br>
+    <input type="button" value="Criar nome Jardim" onclick="btnJardim()"><br>
+    <input type="number" value="1" id="numeroBox">
+    <input type="button" value="criar o número" onclick="btnNumero()"><br>
+    <div id="DivNumeros"></div>
+</body>
+
+<script>
+
+    let c1 = window.document.createElement('c1') //Comando para criar um elemento chamado c1, porém c1 não existe em html, por isso recebe formatação padrão
+    c1.textContent = 'Criado no JS, sem precisar de Função' // o texto de c1 é esse texto ai
+    window.document.body.appendChild(c1) //o body, append(adota)Child variável c1. IMPORTANTE, se você não definir a variável, não tem onde
+                                         // guardar o valor do elemento criado.
+
+    function btnCasa(){
+        let b1 = window.document.createElement('h1')//a variável b1, cria e recebe um elemento h1, que é um título
+        b1.textContent = 'Casa, '//Texto de b1 é 'Casa, '. Logo aparece um Título com nome casa, porquê variável b1 recebe um h1(titulo)
+        let casa = window.document.getElementById('Cidade')//variável casa, recebe o conteudo do id Cidade
+        casa.appendChild(b1)//variável casa, append(adota)Child variável b1. Quem é variavel b1? Variável b1 é um título h1 com texto de 'Casa, '
+    }
+
+    function btnJardim(){
+        let b2 = window.document.createElement('b2')
+        b2.textContent = 'Jardins, '
+        let jardim = window.document.getElementById('Casa')
+        jardim.appendChild(b2)
+    }
+
+    function btnNumero(){
+        let n = window.document.getElementById('numeroBox').value//>>>>>>>>>>>>>>>>>>>>>>>>>>TODO NUMERO DEVE TER VALUE<<<<<<<<<<<<<<<<<<<<<<
+        let DivNumeros = window.document.getElementById('DivNumeros')//Boas práticas, coloque nome da variável, doque se trata.
+        DivNumeros.innerHTML += Number(n) + Number(n) + `<br>`//Não esqueça de transformar as variáveis de string para número
+    }
+
+</script>
+</html>

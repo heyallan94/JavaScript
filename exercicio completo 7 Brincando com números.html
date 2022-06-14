@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números</title>
+</head>
+
+<style>
+    body{
+        background-color: blue;
+        color: white;
+    }
+    select{
+        width: 200px;
+    }
+</style>
+
+<body>
+    <h1>Valores</h1>
+
+    <div id="Adicionar">
+        <p>Digite um número entre 1 e 100 e clique em Adicionar</p> 
+        <p id="p1">Aqui óe </p>
+        <input type="number" name="numero" value="1" id="InputNumero">
+        <input type="button" value="Adicionar" onclick="BtnAdd()"><br>
+        <select name="lista" id="lista" size="10">            
+        </select>
+    </div>
+
+</body>
+</html>
+
+<script>
+        function BtnAdd(){
+            let lista = document.getElementById('lista')
+            let InputNumero = document.getElementById('InputNumero').value
+
+            if (InputNumero >=1 && InputNumero <=100){
+                let opcNova = window.document.createElement('option')
+                opcNova.textContent = `Valor ${InputNumero} adicionado.`
+                lista.appendChild(opcNova)
+                
+
+            }else {
+                window.alert('Digite entre 1 e 100')
+            }
+    }
+</script>
