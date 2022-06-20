@@ -9,7 +9,7 @@
 
 <style>
     body{
-        background-color: blue;
+        background-color: black;
         color: white;
     }
     select{
@@ -22,29 +22,37 @@
 
     <div id="Adicionar">
         <p>Digite um número entre 1 e 100 e clique em Adicionar</p> 
-        <p id="p1">Aqui óe </p>
-        <input type="number" name="numero" value="1" id="InputNumero">
+        <input type="number" name="numero" value="1" id="inputNumero">
         <input type="button" value="Adicionar" onclick="BtnAdd()"><br>
-        <select name="lista" id="lista" size="10">            
-        </select>
+        <select name="lista" id="lista" size="10"></select>
+        <input type="button" value="Finalizar" id="Finalizar" onclick="BtnFinalizar()">
+        <div id="divArray"></div>
+
     </div>
 
 </body>
 </html>
 
 <script>
-        function BtnAdd(){
-            let lista = document.getElementById('lista')
-            let InputNumero = document.getElementById('InputNumero').value
+    let numerosAdd =[]
+    let lista = document.getElementById('lista')
+    let divArray = document.getElementById('divArray')
+    
+    function BtnAdd(){
+        let inputNumero = document.getElementById('inputNumero').value   
+        if (inputNumero >=1 && inputNumero <=100){
+            let opcNova = window.document.createElement('option')
+            opcNova.textContent = `Valor ${inputNumero} adicionado.`
+            lista.appendChild(opcNova)
+            numerosAdd.push(inputNumero)
+            divArray.innerHTML = `O array tem = [${numerosAdd}]. Possui um total de ${numerosAdd.length} elementos.`
+        }else {
+            window.alert('Digite entre 1 e 100')
+        }
+    }
 
-            if (InputNumero >=1 && InputNumero <=100){
-                let opcNova = window.document.createElement('option')
-                opcNova.textContent = `Valor ${InputNumero} adicionado.`
-                lista.appendChild(opcNova)
-                
-
-            }else {
-                window.alert('Digite entre 1 e 100')
-            }
+    function BtnFinalizar(){
+        let TamanhoArray = numerosAdd.length
+        divArray.innerHTML = 'olha' + TamanhoArray
     }
 </script>

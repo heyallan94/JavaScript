@@ -1,6 +1,9 @@
-//Métodos diferentes de obter fatorial
-
-let Fatorial = 5
-for(F = Fatorial; F >=1 ; F = F -1){
-    console.log(`O Fatorial de ${Fatorial}!` + F)
+let fatorial = 3
+let n = 1
+let soma = 1
+for(n ; n <= fatorial ; n++){
+    soma = soma * n
+    console.log(n)
 }
+
+console.log(soma)
