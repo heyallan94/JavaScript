@@ -1,0 +1,14 @@
+{
+    "nome": "Jhon",
+    "idade": 28,
+    "cidade": "New York",
+    "redes_sociais":["Instagram", "Facebook" , "Linkedin"],
+    "familiar":{
+        "pai":"Ben",
+        "mae":"Mary",
+        "address":"Maryland",
+        "anotacao_final": 
+        "O JSON, funciona apenas dessa maneira. As propriedades são com aspas duplas e os valores também! Outro fator que, no final não pode finalizar com uam VÍRGULA , "
+}        
+}
+
