@@ -11,8 +11,8 @@ numa nova constante, que será o dobro*/
 
 const salarios = [1200 , 1800 , 1500 , 2000 , 3000]
 
-const salariosDobro = salarios.map(function(item){ //note que é boa prática já salvar a function
-    return item * 2                                //dentro da constante, assim a nova lista
+const salariosDobro = salarios.map((item) => { //note que é boa prática já salvar a function
+    return item * 2
 })                                                 //sempre será oque se pede da function.
                                                    //interessante colocar o nome da const oque ela
 console.log(salariosDobro)                         //representa
