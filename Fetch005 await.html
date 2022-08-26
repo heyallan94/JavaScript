@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+const url = "https://pokeapi.co/api/v2/pokemon"
+
+      async function getResponse(){
+
+        const getResponse = await fetch (url) //Com await devemos guardar os dados em uma variável
+        console.log(getResponse) // Mais uma vez, essa linah apenas para mostrar como estão os dados
+
+        const data = await getResponse.json() //Note que devemos fazer a conversão para json   
+        console.log(data)
+        for(i = 0 ; i < data.results.length; i++ ){
+            console.log(data.results[i].name)
+
+        let name = document.createElement('p')
+        name.innerText = data.results[i].name
+
+        document.body.appendChild(name)
+            
+        }
+      }
+
+    getResponse()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

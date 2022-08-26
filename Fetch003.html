@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+
+        fetch ("https://rickandmortyapi.com/api/character?count=10"
+        ).then(function(response) {
+            return response.json()
+        }).then(function(json) {
+            console.log(json)//Note que quando o dado chega em Array, usamos [] para especificar
+        })                                   //Para acessar propriedades, nesse exemplo, os dados chegam com nome de info e results
+                                             //Para acessar uma propriedade especifica usamos a árvore, results.id para exibir o id
+                                             // exibir o nome, results.name, entre outras propriedades. Mas para acessar o objeto todo
+                                             //usamos nesse caso json.results[]
+
+    </script>
+</head>
+<body>
+</body>
+</html>
+

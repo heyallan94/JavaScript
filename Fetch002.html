@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+
+       function api(){
+        fetch ("https://rickandmortyapi.com/api/"
+        ).then(function(response) {
+            return response.json()
+        }).then(function(json) {
+            console.log(json)
+        })}
+
+        function apicharacter(){
+        fetch ("https://rickandmortyapi.com/api/character"
+        ).then(function(response) {
+            return response.json()
+        }).then(function(json) {
+            console.log(json)
+        })}
+
+        function apiepisode(){
+        fetch ("https://rickandmortyapi.com/api/episode"
+        ).then(function(response) {
+            return response.json()
+        }).then(function(json) {
+            console.log(json)
+        })}
+        
+        function apilocation(){
+        fetch ("https://rickandmortyapi.com/api/location"
+        ).then(function(response) {
+            return response.json()
+        }).then(function(json) {
+            console.log(json)
+        })}
+
+    </script>
+</head>
+<body>
+    <input type="button" value="Buscar API" onclick="api()"><br>
+    <input type="button" value="Buscar Characters" onclick="apicharacter()"><br>
+    <input type="button" value="Buscar Episodes" onclick="apiepisode()"><BR>
+    <input type="button" value="Buscar Locations"onclick="apilocation()"><BR>
+</body>
+</html>
+
+Como pedir alguns fetch de acordo com inputs

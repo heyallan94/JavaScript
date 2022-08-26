@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+
+        fetch ("https://rickandmortyapi.com/api/character"
+        ).then(function(response) {
+             return response.json()
+
+         }).then(function(json) {
+            
+            for(i = 0; i < json.results.length;i++){//usei um loop para puxar todos os dados de acordo com quantas página recebia
+                let jsonname = json.results[i].name //lembre-se de colocar sempre variáveis que sejam fáceis de entender oque significam
+                let jsonImg = json.results[i].image //nesse caso o dado era guardado em json(Nome do dado), e era trabalhado com ele
+                console.log(jsonname, jsonImg)//Aqui só pra verificar se os dados que eu queroa chegaram certos
+                
+                let name = document.createElement("p") //criei uma variável chamada name, que recebe o elemento p 
+                name.innerText = jsonname //essa varíavel recebe o valor atual de jsonname, note que é um for que está o tempo todo em loop
+                document.body.appendChild(name)//por final atrelei o valor ao body
+
+                let img = document.createElement("img")
+               img.src = jsonImg//note que imagens são img.src, já para texto, name.innerText
+                document.body.appendChild(img)
+            }})      
+            
+        fetch ("https://pokeapi.co/api/v2/pokemon"
+        ).then(function(response){
+            return response.json()            
+        }).then(function(json){
+            for( i = 0; i < json.results.length; i++){
+            console.log(json.results[i].name)}
+        })
+
+        
+    </script>
+</head>
+<body>
+    <div>div</div>
+</body>
+</html>
+

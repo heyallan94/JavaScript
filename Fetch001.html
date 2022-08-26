@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        fetch("https://rickandmortyapi.com/api").then(function(response){
+            console.log(response)
+        }
+        )
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+Aqui é o básico de como puxar dados de uma api através do fetch. 
+Linha 10, note que ao colocar o fetch("link da url") 
+Coloca-se um then ao final(função(nomedafunção){console.log(nome da função)})
+Se der tudo certo os dados chegam ao console
