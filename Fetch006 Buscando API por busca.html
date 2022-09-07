@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <input type="text" id="url" ><br>
+        <input type="button" value="Buscar API" onclick="buscarApi()">
+    </div>    
+    <br>
+    <br>
+    <textarea name="" id="dadosBruto" cols="100" rows="30"></textarea>
+  
+    <style>
+
+        body{
+            background-color: beige;
+            text-align: center;
+        }
+
+        #url{
+            width: 500px;
+        }
+    </style>
+    
+    <script>
+        //https://pokeapi.co/api/v2/pokemon
+     let url = window.document.getElementById('url')
+     let dadosBruto = window.document.getElementById('dadosBruto')
+    
+    async function buscarApi()
+    {
+        console.clear()
+        if(url.value == ""){
+         alert("Insira uma API para buscar.") 
+        }
+        else{
+         let buscarApi = url.value   
+         alert(`Buscando Api [${buscarApi}]`)
+
+         const response = await fetch(buscarApi)
+         console.log(response)
+         const data = await response.json()
+         console.log(data)
+         //dadosBruto.innerText = response.json
+
+         function brutoJson(data){
+            console.log(data)
+            dadosBruto.innerText = JSON.stringify(data)
+         } 
+         brutoJson(data)
+        };      
+    }
+    
+    </script>
+
+</body>
+
+</html>
