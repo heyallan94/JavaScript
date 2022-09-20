@@ -1,13 +1,7 @@
-const minhaschaves = ['name' , 'age']//Aqui são os nomes que eu quero que retornem
+const objfiltered = {} //Have an empty object
+const objtofilter = {name: "Allan", date: "16/09/22"}
+const mykeys = ["name"]
 
-const cliente = {//Objeto que quero filtrar
-    name: 'John',
-    age : 45,
-    city: "Las vegas",
-    bank: 24000
-} 
-
-const clientefiltrado = {} //Importante criar um novo objeto vazio para ser populado pelos filtros
 
 function objfilterbyarray(arraykeys , objtofilter , objfiltered){
     //This function need the objfiltered an empty object( const objfiltered = {} )
@@ -20,6 +14,11 @@ function objfilterbyarray(arraykeys , objtofilter , objfiltered){
     })//will return and populate objfiltered
 }
 
-objfilterbyarray(minhaschaves , cliente , clientefiltrado)
+objfilterbyarray(mykeys, objtofilter, objfiltered)
 
-console.log(clientefiltrado)
+console.log(objfiltered)
+
+
+
+
+

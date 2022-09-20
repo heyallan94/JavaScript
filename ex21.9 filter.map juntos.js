@@ -36,6 +36,10 @@ let pedidos = [
 ];
 
 //Iterador filter
-let whoAskSoda = pedidos.filter((seuParametro) =>{return seuParametro.bebida == 'Refrigerante'}).map((qualquernome) => qualquernome.id)
+let whoAskSoda = pedidos.filter(
+    (seuParametro) =>{
+        return seuParametro.bebida == 'Refrigerante'
+    }).map(
+        (qualquernome) => qualquernome.id)
 
 console.log(whoAskSoda)
