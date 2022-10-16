@@ -12,6 +12,10 @@ const developer = {
     isEmployed: true
   };
 
-const key = "name"
-const eai = developer.hasOwnProperty(key)
-console.log(eai)
+const key = ["name" , "car"]
+const check = developer.hasOwnProperty(key)
+console.log(check)
+
+if(key[1] in developer){
+  console.log('deu certo')
+}

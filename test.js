@@ -1,8 +1,7 @@
-const num = 3
+let number = 16
 
-function x3(n){    
-    return n + 5 
-}
+function findNextSquare(sq) {
+    console.log(Math.sqrt(sq)%1? -1 : Math.pow(Math.sqrt(sq)+1,2))
+  }
 
-x3(num)
-console.log(num)
+findNextSquare(number)

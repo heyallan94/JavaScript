@@ -21,10 +21,5 @@ const prices = [{
     description : 'gtx 760 2gb'
 }]
 
-
-
 const prices500mores = prices.filter(elem => { return elem.id > 500})
-
-
-
 console.log(prices500mores)

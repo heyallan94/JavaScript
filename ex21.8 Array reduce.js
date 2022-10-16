@@ -16,8 +16,8 @@ console.log(totalcarrinho)                                                   //A
 
 /*Para array de objetos:*/
 
-const cars = [{
-    Marca: "Audi", Valor: 120000, Valor: 50000},
+const cars = [
+    {Marca: "Audi", Valor: 120000, Valor: 50000},
     {Marca:"Chevrolet", Valor: 80000,},
     {Marca: "Fiat", Valor: 30000,},
     {Marca: "Porsche", Valor: 250000,},
