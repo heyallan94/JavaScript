@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*Make an algorithm that ask for a number in a prompt and if it is empty, do an alert('hey type something')
+    if it isn't 1, then finish saying "okay, it isn't 1"*/
+    
+    let number = prompt('Type 1')
+
+    if(number != 1 && number != ''){
+        alert(`That's ${number}, I asked for 1. Just go!`)
+    }else if(number == ''){
+        alert('Man, you should have typed something...')
+    }
+    else if(number == 1){
+        alert('Thanks for 1')
+    }
+
+</script>
+</html>
