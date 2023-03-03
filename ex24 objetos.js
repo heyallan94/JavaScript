@@ -7,11 +7,12 @@ let n = "Rio de Janeiro" //defini uma variável antes para colocar dentro do obj
 let pessoa = { //inicia com chaves
     nome: "Caio", //ao digitar pessoa.nome, vai aparecer o dado "Caio"
     idade: 23, //Adcionando number
-    cidade: [n], //adicionando variável
+    cidade: n, //adicionando variável
     peso: "80kg" //adicionando string
 }
 
 console.log(pessoa) //impromir todo o objeto
 console.log(pessoa.nome) //imprimir um dado do objeto
 console.log(pessoa.casa)// não existe um dado chamado casa no objeto, então dá undefined
+console.log(pessoa.cidade)
 //objetos são separados por vírgula, não esquecer
