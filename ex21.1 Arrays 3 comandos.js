@@ -3,7 +3,7 @@ let a = [] //cria um array sem INDEX ou sem KEYS
 
 let b = [1, 2, 3] //Aqui array com INDEX (Não é parametros, não confunda)
 
-let c = [5, 4, n = 0, 2, 1] //Aqui tem um index que é variável n, se não for preenchida a variável n, ela se torna 0. Se não tiver assim, o n será undefinied caso não tenha valor
+let c = [5, 4, n = 0, 2,5, 1] //Aqui tem um index que é variável n, se não for preenchida a variável n, ela se torna 0. Se não tiver assim, o n será undefinied caso não tenha valor
 
 console.log('Array b tem: ' + b)
 a.push(30)//colocar um valor a ultimo index do array a
@@ -12,6 +12,9 @@ a.unshift()//adicionar um index ao primeiro array
 a.shift()//remove o primeiro index
 b.splice(1 , 0 , 1250) // o splica ADICIONA um elemento ao index. (IndexQueQueroColocarANTESOIndex, 0 = não remove o index seguinte, 1 = remove o index seguinta, número que quero adicionar(ou variável ou string etc.)
 b.splice(1 , 0) //
+a.indexOf(5)//primeiro index que tiver o número 5
+a.lastIndexOf(5)//último index que tiver o número 5
+a.reverse() //simplesmente reverte os dados de frente para traz 
 
 console.log('Array b tem: ' + b)
 
@@ -34,4 +37,6 @@ console.log(a)// antes o valor era 30, agora virou 'Era zero'
 let ultimoA = a[a.length -1] //Pegar o último array adcionado, note que precisa de uma váriavel para gravar tal dado
 
 console.log(ultimoA) 
+
+console.log(novo)
 

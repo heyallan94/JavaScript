@@ -20,3 +20,6 @@ function decrement(evenOrOdd , number){
 }
 
 decrement('odd' , 62)
+decrement('even' , 25)
+
+

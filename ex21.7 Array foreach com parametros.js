@@ -11,9 +11,9 @@ retorna um novo array*/
 let pessoas = ['Ayrton', 'Cláudio', 'Mitchel', 'Darryl' , 'Barry']
 
 pessoas.forEach(function(itemAtual, indice, arraycompleto){
-    console.log("Normal function" ,itemAtual, indice, arraycompleto)   //função normal
+    console.log(itemAtual, indice, arraycompleto)   //função normal
 })
 
 pessoas.forEach((itemAtual, indice, arraycompleto) => {
-    console.log("Arrow function" , itemAtual, indice, arraycompleto)   //função flecha
+    console.log(itemAtual, indice, arraycompleto)   //função flecha
 })
