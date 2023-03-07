@@ -15,3 +15,4 @@ function ateZero(n){
 ateZero(10)
 
 /* É tão útil quanto o for */
+
