@@ -6,7 +6,7 @@ let carros = {
     Gol : 28000,
     Tucson : 33000,
     Celta : 17000,
-    Desconto : 25
+    Desconto : 250
 }
 
 let {Gol : carro1 , Tucson : carro2, Celta : carro3, Desconto: VinteCinco} = carros
