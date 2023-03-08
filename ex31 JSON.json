@@ -8,7 +8,7 @@
         "mae":"Mary",
         "address":"Maryland",
         "anotacao_final": 
-        "O JSON, funciona apenas dessa maneira. As propriedades são com aspas duplas e os valores também! Outro fator que, no final não pode finalizar com uam VÍRGULA , "
+        "O JSON, funciona apenas dessa maneira. As propriedades são com aspas duplas e os valores também! Outro fator que, no final não pode finalizar com uma VÍRGULA , "
 }        
 }
 
