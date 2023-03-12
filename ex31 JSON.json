@@ -7,6 +7,7 @@
         "pai":"Ben",
         "mae":"Mary",
         "address":"Maryland",
+        "velocista": [1,2,3,4],
         "anotacao_final": 
         "O JSON, funciona apenas dessa maneira. As propriedades são com aspas duplas e os valores também! Outro fator que, no final não pode finalizar com uma VÍRGULA , "
 }        
