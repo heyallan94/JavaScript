@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*
+Para armazenar dados de uma variável mesmo após o usuário atualizar a 
+página em Javascript, você pode usar a API de armazenamento local do 
+navegador. Esta API permite que você armazene dados no navegador do 
+usuário, de modo que eles possam ser acessados e recuperados mesmo 
+após o usuário fechar o navegador ou atualizar a página.
+
+Você pode usar dois métodos diferentes de armazenamento 
+local: localStorage e sessionStorage. 
+O localStorage armazena dados permanentemente no navegador, 
+enquanto o sessionStorage armazena dados apenas durante a 
+sessão atual do navegador.
+
+
+localStorage
+•Capacidade máxima de 10mb
+•Os dados são salvos no computador do usuário
+•Esses dados não possuem tempo de expiração, mas podem ser removidos
+•Os dados ficam na aba application do dev Tools
+
+sessionStorage
+•Recurso similar ao localStorage
+•Capacidade máxima de 5mb
+•Os dados são salvos no computador do usuário
+•Os dados expiram quando a aba é fechada
+=====================================================*/
+
+//Inserir dado
+localStorage.setItem('name', 'Allan')
+//Restart sem perder dados
+
+//Resgatar item
+let name = localStorage.getItem('name')
+console.log(name)
+//Resgate item que não existe
+
+
+</script>
+</html>
