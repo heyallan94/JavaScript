@@ -7,9 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <input id="a" type="text">
+    <div id="b"></div>
+    <button onclick="button()">guardar</button>
 </body>
 <script>
+ 
 /*
 Para armazenar dados de uma variável mesmo após o usuário atualizar a 
 página em Javascript, você pode usar a API de armazenamento local do 
@@ -23,6 +26,8 @@ O localStorage armazena dados permanentemente no navegador,
 enquanto o sessionStorage armazena dados apenas durante a 
 sessão atual do navegador.
 
+ ===================IMPORTANTE==============
+ O dado no Application vira string
 
 localStorage
 •Capacidade máxima de 10mb
@@ -43,8 +48,40 @@ localStorage.setItem('name', 'Allan')
 
 //Resgatar item
 let name = localStorage.getItem('name')
-console.log(name)
+
 //Resgate item que não existe
+
+let lastName = localStorage.getItem('lastName') //Se não existe, ele vai buscar e retornar null
+
+//Deletar item
+localStorage.removeItem('name')
+
+//Limpar todos itens
+localStorage.setItem('a' , 1)
+localStorage.setItem('b' , 2)
+localStorage.clear()
+
+//Session storage
+sessionStorage.setItem('number' , 123)
+
+//Salvar objeto
+
+const person = {
+    name: "Allan",
+    age: 27,
+    job: "dev"
+}
+
+localStorage.setItem('person', JSON.stringify(person))
+
+//Resgatar OBJETO
+
+const getPerson = JSON.parse(localStorage.getItem('person'))
+
+console.log(getPerson.name)
+
+
+
 
 
 </script>
