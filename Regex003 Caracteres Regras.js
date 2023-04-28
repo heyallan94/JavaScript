@@ -19,6 +19,11 @@
  * 
  * . 
  * Aceita qualquer carctere menos nova linha
+ * 
+ * ^ Usar no começo e $ usar no final, significa QUE AQUELE PADRÃO ALI COMEÇA ALI E TERMINA ALI
+ * por exemplo: /^[A-Z]+$/ , Este padrão só aceita uma string que começa de A - Z em qualquer parte da 
+ * string. Como a string é o padrão inteiro, toda string será assim.
+ * 
  */
 
 const pontoRegex = /./
