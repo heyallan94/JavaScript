@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse move</title>
+</head>
+<body>
+    
+</body>
+<script>
+/**
+ * Podemos ativar o eventos com a movimentação
+ * do mouse.
+ * 
+ * mousemove
+ * 
+ * Através desse evento podemos detectar a posição
+ * do ponteiro do mouse na tela
+ * 
+ * 
+ */
+
+ window.addEventListener('mousemove',function(e){
+    console.log(`X: ${e.x}`);
+    console.log(`Y: ${e.y}`)
+
+    if(e.x > 1000){
+        alert('maior q 1000')
+    }
+})
+ 
+
+</script>
+</html>
