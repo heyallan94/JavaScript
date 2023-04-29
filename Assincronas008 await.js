@@ -23,3 +23,5 @@ async function resSoma( a , b , c){
 
     return await x + y
 }
+
+resSoma(1,2,3).then(value => console.log(value))
