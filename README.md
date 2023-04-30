@@ -1,11 +1,8 @@
 # JSCodes
-Olá, meu nome é Allan, atualmente estou estudando js para desenvolvimento web.
-Estudo periodicamente 2 a 4 horas por dia...
+Olá, meu nome é Allan, atualmente estou estudando periodicamente 2 a 8 horas por dia...
 
-Faço exercícios de lógica para js e quando não estou estudando começo a codar
-para tentar fazer sites responsivos.
+Faço exercícios de lógica para js e quando não estou estudando começo a codar.
 
-Esta branch é TODO O APRENDIZADO que vou buscando e deixando salvo aqui no meu github.
-Se algum dia meu pc der problema, todo o meu aprendizado está salvo aqui.
+Esta branch é TODO O APRENDIZADO  sobre js.
 
 Grato pela atenção
